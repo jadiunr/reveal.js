@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    image: node:10.15.3-alpine
+    command: npm start
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - '8000:8000'
+    stdin_open: true
+    tty: true
